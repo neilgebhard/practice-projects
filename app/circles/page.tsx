@@ -10,30 +10,34 @@ type Circle = {
 
 const Page = () => {
   const [circles, setCircles] = useState<Circle[]>([])
-  const [index, setIndex] = useState(-1)
+  const [popped, setPopped] = useState<Circle[]>([])
 
   const handleWindowClick = (e: MouseEvent) => {
     const circle = {
       x: e.clientX,
       y: e.clientY,
     }
-
+    // remove from circles if below array index is below circles.length - 1
     setCircles((prev) => [...prev, circle])
-    setIndex((prev) => prev + 1)
+    setPopped([])
   }
 
-  const handlePrevClick = (e: any) => {
+  const handlePrevClick = (e: MouseEvent) => {
     e.stopPropagation()
-    // prevent index from going below -1
-    const prevIndex = Math.max(index - 1, -1)
-    setIndex(prevIndex)
+    const newPopped = circles.pop()
+    if (newPopped) {
+      setPopped([...popped, newPopped])
+      setCircles([...circles])
+    }
   }
 
   const handleNextClick = (e: any) => {
+    const newPopped = popped.pop()
+    if (newPopped) {
+      setCircles([...circles, newPopped])
+      setPopped(popped)
+    }
     e.stopPropagation()
-    // prevent index from exceeding circles array length
-    const nextIndex = Math.min(index + 1, circles.length - 1)
-    setIndex(nextIndex)
   }
 
   useEffect(() => {
@@ -44,26 +48,22 @@ const Page = () => {
     }
   }, [])
 
-  console.log(circles, index)
-
   return (
     <div className='relative'>
       <div className='flex gap-3 p-3'>
         <Button onClick={handlePrevClick}>Prev</Button>
         <Button onClick={handleNextClick}>Next</Button>
       </div>
-      {circles.map((circle, i) => {
-        return i <= index ? (
-          <div
-            key={i}
-            className='absolute rounded-full h-3 w-3 bg-black -translate-x-1/2 -translate-y-1/2'
-            style={{
-              left: circle.x,
-              top: circle.y,
-            }}
-          />
-        ) : null
-      })}
+      {circles.map((circle, i) => (
+        <div
+          key={i}
+          className='absolute rounded-full h-3 w-3 bg-black -translate-x-1/2 -translate-y-1/2'
+          style={{
+            left: circle.x,
+            top: circle.y,
+          }}
+        />
+      ))}
     </div>
   )
 }
