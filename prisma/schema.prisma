@@ -14,3 +14,28 @@ model Thing {
   id      String @id @default(uuid())
   content String
 }
+
+model Habit {
+  id        String   @id @default(uuid())
+  userId    String
+  date      DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  exercised  Boolean?
+  sleptWell  Boolean?
+  ateWell    Boolean?
+  drankWell  Boolean?
+  meditated  Boolean?
+  read       Boolean?
+  wrote      Boolean?
+  learned    Boolean?
+  worked     Boolean?
+  played     Boolean?
+  socialized Boolean?
+  relaxed    Boolean?
+  cleaned    Boolean?
+  organized  Boolean?
+
+  @@unique([userId, date])
+}

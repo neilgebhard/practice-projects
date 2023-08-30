@@ -13,6 +13,10 @@ const links = [
     href: '/server-actions',
     label: 'Server Actions',
   },
+  {
+    href: '/habit-tracker',
+    label: 'Habit Tracker',
+  },
 ]
 
 export default function Home() {
