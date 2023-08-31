@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/db'
 import { auth } from '@clerk/nextjs'
-import Edit from './components/edit'
-import Create from './components/create'
+import HabitForm from './components/habit-form'
+import { redirect } from 'next/navigation'
 
 type Props = { searchParams: { date: string } }
 
@@ -13,16 +13,15 @@ const Page = async ({ searchParams }: Props) => {
 
   const { userId }: { userId: string | null } = auth()
 
-  let habit
-  if (userId) {
-    habit = await prisma.habit.findUnique({
-      where: { userId_date: { userId, date } },
-    })
-  }
+  if (!userId) redirect('/sign-in')
+
+  let habit = await prisma.habit.findUnique({
+    where: { userId_date: { userId, date } },
+  })
 
   return (
     <main className='p-4'>
-      <Create date={date} initialData={habit} />
+      <HabitForm date={date} initialData={habit} />
     </main>
   )
 }

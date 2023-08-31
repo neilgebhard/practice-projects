@@ -25,7 +25,7 @@ const formSchema = z.object({
 
 type Props = {
   date: string
-  initialData: Habit | null | undefined
+  initialData: Habit | null
 }
 
 const Create = ({ initialData, date }: Props) => {
