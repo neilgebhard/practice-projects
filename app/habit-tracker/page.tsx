@@ -3,14 +3,12 @@ import { auth } from '@clerk/nextjs'
 import Edit from './components/edit'
 import Create from './components/create'
 
-const getDate = () => new Date().toLocaleDateString()
-
 type Props = { searchParams: { date: string } }
 
 const Page = async ({ searchParams }: Props) => {
   let date = new Date(searchParams.date).toLocaleDateString()
   if (date === 'Invalid Date') {
-    date = getDate()
+    date = new Date().toLocaleDateString()
   }
 
   const { userId }: { userId: string | null } = auth()
@@ -24,11 +22,7 @@ const Page = async ({ searchParams }: Props) => {
 
   return (
     <main className='p-4'>
-      {habit ? <Edit /> : <Create />}
-      {/* <div>{date}</div>
-      <pre>{JSON.stringify(searchParams, null, 2)}</pre>
-      <pre>{JSON.stringify(habit, null, 2)}</pre>
-      <pre>{JSON.stringify(userId, null, 2)}</pre> */}
+      <Create date={date} initialData={habit} />
     </main>
   )
 }

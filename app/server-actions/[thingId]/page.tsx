@@ -5,7 +5,6 @@ const Page = async ({
 }: {
   params: { thingId: string }
 }) => {
-  console.log(thingId)
   const thing = await prisma.thing.findUnique({
     where: {
       id: thingId,

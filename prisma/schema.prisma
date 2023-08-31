@@ -18,10 +18,11 @@ model Thing {
 model Habit {
   id        String   @id @default(uuid())
   userId    String
-  date      DateTime
+  date      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  notes      String?
   exercised  Boolean?
   sleptWell  Boolean?
   ateWell    Boolean?
