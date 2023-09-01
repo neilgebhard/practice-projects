@@ -22,21 +22,22 @@ model Habit {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  notes      String?
-  exercised  Boolean?
-  sleptWell  Boolean?
-  ateWell    Boolean?
-  drankWell  Boolean?
-  meditated  Boolean?
-  read       Boolean?
-  wrote      Boolean?
-  learned    Boolean?
-  worked     Boolean?
-  played     Boolean?
-  socialized Boolean?
-  relaxed    Boolean?
-  cleaned    Boolean?
-  organized  Boolean?
+  notes String?
+
+  exercised                Boolean?
+  practicedProperNutrition Boolean?
+  sleptWell                Boolean?
+  learned                  Boolean?
+  avoidedAlcohol           Boolean?
+  avoidedSmoking           Boolean?
+  socialized               Boolean?
+  limitedScreenTime        Boolean?
+  read                     Boolean?
+  expressedGratitude       Boolean?
+  meditated                Boolean?
+  actedWithKindness        Boolean?
+  practicedPersonalHygiene Boolean?
+  journaled                Boolean?
 
   @@unique([userId, date])
 }

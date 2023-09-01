@@ -5,15 +5,67 @@ import { auth } from '@clerk/nextjs'
 import { Habit } from '@prisma/client'
 import { revalidatePath } from 'next/cache'
 
-type HabitProps = Pick<Habit, 'notes' | 'date'>
+export type HabitProps = Pick<
+  Habit,
+  | 'date'
+  | 'notes'
+  | 'exercised'
+  | 'practicedProperNutrition'
+  | 'sleptWell'
+  | 'learned'
+  | 'avoidedAlcohol'
+  | 'avoidedSmoking'
+  | 'socialized'
+  | 'limitedScreenTime'
+  | 'read'
+  | 'expressedGratitude'
+  | 'meditated'
+  | 'actedWithKindness'
+  | 'practicedPersonalHygiene'
+  | 'journaled'
+>
 
-const editHabit = async ({ notes, date }: HabitProps) => {
+const editHabit = async ({
+  date,
+  notes,
+  exercised,
+  practicedProperNutrition,
+  sleptWell,
+  learned,
+  avoidedAlcohol,
+  avoidedSmoking,
+  socialized,
+  limitedScreenTime,
+  read,
+  expressedGratitude,
+  meditated,
+  actedWithKindness,
+  practicedPersonalHygiene,
+  journaled,
+}: HabitProps) => {
   const { userId }: { userId: string | null } = auth()
 
   if (!userId) return
 
   await prisma.habit.update({
-    data: { notes },
+    data: {
+      date,
+      notes,
+      exercised,
+      practicedProperNutrition,
+      sleptWell,
+      learned,
+      avoidedAlcohol,
+      avoidedSmoking,
+      socialized,
+      limitedScreenTime,
+      read,
+      expressedGratitude,
+      meditated,
+      actedWithKindness,
+      practicedPersonalHygiene,
+      journaled,
+    },
     where: {
       userId_date: {
         userId,

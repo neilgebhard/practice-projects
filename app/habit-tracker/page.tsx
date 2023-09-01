@@ -1,7 +1,8 @@
 import { prisma } from '@/lib/db'
 import { auth } from '@clerk/nextjs'
-import HabitForm from './components/habit-form'
 import { redirect } from 'next/navigation'
+import HabitForm from './components/habit-form'
+import HabitCalendar from './components/habit-calendar'
 
 type Props = { searchParams: { date: string } }
 
@@ -20,8 +21,15 @@ const Page = async ({ searchParams }: Props) => {
   })
 
   return (
-    <main className='p-4'>
-      <HabitForm date={date} initialData={habit} />
+    <main className='max-w-5xl mx-auto p-4'>
+      <div className='flex gap-6'>
+        <div className='grow'>
+          <HabitForm date={date} initialData={habit} />
+        </div>
+        <div>
+          <HabitCalendar />
+        </div>
+      </div>
     </main>
   )
 }
