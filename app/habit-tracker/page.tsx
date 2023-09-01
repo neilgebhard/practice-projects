@@ -22,9 +22,10 @@ const Page = async ({ searchParams }: Props) => {
 
   return (
     <main className='max-w-5xl mx-auto p-4'>
+      <h1 className='text-3xl font-bold mb-5'>{date}</h1>
       <div className='flex gap-6'>
         <div className='grow'>
-          <HabitForm date={date} initialData={habit} />
+          <HabitForm date={date} initialHabit={habit} />
         </div>
         <div>
           <HabitCalendar />
