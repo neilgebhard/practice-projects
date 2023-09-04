@@ -3,6 +3,7 @@ import { auth } from '@clerk/nextjs'
 import { redirect } from 'next/navigation'
 import HabitForm from './components/habit-form'
 import HabitCalendar from './components/habit-calendar'
+import { Separator } from '@/components/ui/separator'
 
 type Props = { searchParams: { date: string } }
 
@@ -22,7 +23,11 @@ const Page = async ({ searchParams }: Props) => {
 
   return (
     <main className='max-w-5xl mx-auto p-4'>
-      <h1 className='text-3xl font-bold mb-5'>{date}</h1>
+      <h1 className='text-3xl font-bold'>{date}</h1>
+      <p className='text-muted-foreground text-sm'>
+        Track your habits for the date
+      </p>
+      <Separator className='mt-2 mb-5' />
       <div className='flex gap-6'>
         <div className='grow'>
           <HabitForm date={date} initialHabit={habit} />

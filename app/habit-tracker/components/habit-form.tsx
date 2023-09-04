@@ -110,266 +110,270 @@ const Create = ({ initialHabit, date }: Props) => {
                 </FormItem>
               )}
             />
-            <FormField
-              control={form.control}
-              name='exercised'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>Exercised</div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='sleptWell'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>Slept well</div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='practicedProperNutrition'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Practiced proper nutrition
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='learned'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Learned something new
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='avoidedAlcohol'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Avoided alcohol?
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='avoidedSmoking'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Avoided smoking
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='socialized'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>Socialized</div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='limitedScreenTime'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Limited screen time
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='read'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Did some reading
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='expressedGratitude'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Expressed gratitude
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='meditated'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Meditated or practiced mindfulness
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='actedWithKindness'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Acted with kindness
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='practicedPersonalHygiene'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>
-                      Practiced personal Hygiene
-                    </div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='journaled'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4'>
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className='space-y-1 leading-none'>Journaled</div>
-                  </FormLabel>
-                </FormItem>
-              )}
-            />
+            <div className='grid grid-cols-3 gap-3'>
+              <FormField
+                control={form.control}
+                name='exercised'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>Exercised</div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='sleptWell'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Slept well last night
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='practicedProperNutrition'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Practiced proper nutrition
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='learned'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Learned something new
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='avoidedAlcohol'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Avoided alcohol?
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='avoidedSmoking'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Avoided smoking
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='socialized'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>Socialized</div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='limitedScreenTime'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Limited screen time
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='read'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Did some reading
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='expressedGratitude'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Expressed gratitude
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='meditated'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Meditated or practiced mindfulness
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='actedWithKindness'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Acted with kindness
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='practicedPersonalHygiene'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>
+                        Practiced personal Hygiene
+                      </div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name='journaled'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='inline-flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 w-full h-full'>
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className='space-y-1 leading-none'>Journaled</div>
+                    </FormLabel>
+                  </FormItem>
+                )}
+              />
+            </div>
           </div>
-          <Button>Save</Button>
+          <Button size='lg'>Save</Button>
         </form>
       </Form>
     </>
