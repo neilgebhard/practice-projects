@@ -18,6 +18,7 @@ import editHabit from '../actions/editHabit'
 import { Habit } from '@prisma/client'
 import { Textarea } from '@/components/ui/textarea'
 import { Checkbox } from '@/components/ui/checkbox'
+import toast from 'react-hot-toast'
 
 const formSchema = z.object({
   notes: z.string(),
@@ -85,8 +86,10 @@ const Create = ({ initialHabit, date }: Props) => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     if (initialHabit) {
       editHabit({ ...values, date })
+      toast.success('Habit updated successfully')
     } else {
       createHabit({ ...values, date })
+      toast.success('Habit updated successfully')
     }
   }
 

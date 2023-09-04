@@ -1,5 +1,6 @@
 import { UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
+import { Toaster } from 'react-hot-toast'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </div>
       {children}
+      <Toaster />
     </>
   )
 }
